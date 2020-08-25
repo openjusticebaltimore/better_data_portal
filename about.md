@@ -1,8 +1,8 @@
 ### About this data portal
-This project was built and is maintained by Anthony Moser to make it easier to search Chicago's data portal (and others
-like it). 
+This portal is maintained by Open Justice Baltimore to make it easier to search Baltimore's data portal (and others
+like it). The portal code was originally written by Anthony Moser.
 
-It's a fairly simple Python app that uses sodapy to access the data portal and Streamlit to create this web interface. You can check out the repo at <http://www.github.com/anthonymoser/better_data_portal>
+It's a fairly simple Python app that uses sodapy to access the data portal and Streamlit to create this web interface. You can check out the repo at <http://www.github.com/openjusticebaltimore/better_data_portal>
 
 
 ### Notes on usage

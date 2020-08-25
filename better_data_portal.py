@@ -145,8 +145,14 @@ def group_sets(datasets: dict):
 
 
 app_token = None
+st.beta_set_page_config(
+    layout="wide",  # Can be "centered" or "wide". In the future also "dashboard", etc.
+    initial_sidebar_state="expanded",  # Can be "auto", "expanded", "collapsed"
+    page_title='Baltimore City Better Data Portal',  # String or None. Strings get appended with "• Streamlit". 
+    page_icon=None,  # String, anything supported by st.image, or None.
+)
 st.title('Better Data Portal')
-st.write('Keyword search across data sets for Socrata data portals')
+st.write('Keyword search across data sets for Socrata data portals. Use the search panel on the left to get started.')
 top_box = st.empty()
 
 about = st.sidebar.button('ABOUT THIS PORTAL')
@@ -155,7 +161,7 @@ about_text = f.read()
 if about:
     top_box.markdown(about_text)
 
-data_portal_url = st.sidebar.text_input("Data Portal URL", value='data.cityofchicago.org')
+data_portal_url = st.sidebar.text_input("Data Portal URL", value='data.baltimorecity.gov')
 
 client, ds = initialize_socrata(data_portal_url, app_token)
 resource_ids, sets = get_sets(ds)
