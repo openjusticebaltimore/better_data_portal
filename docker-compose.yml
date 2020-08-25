@@ -1,0 +1,7 @@
+version: '3'
+services:
+  portal:
+    build: .
+    container_name: better_data_portal
+    ports:
+      - 8000:8000
